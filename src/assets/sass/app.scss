@@ -1,1 +1,7 @@
-@import "../theme/theme.scss";
+@import "../theme/color.scss";
+@import "../theme/globals.scss";
+
+body{
+    background-color: black;
+    color:$color;
+}
