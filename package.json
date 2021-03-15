@@ -1,0 +1,25 @@
+{
+  "name": "card-profile",
+  "version": "1.0.0",
+  "description": "example of card profile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HilcaDev/profile-card.git"
+  },
+  "keywords": [
+    "css3",
+    "html5",
+    "scss",
+    "github"
+  ],
+  "author": "HilcaDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HilcaDev/profile-card/issues"
+  },
+  "homepage": "https://github.com/HilcaDev/profile-card#readme"
+}
