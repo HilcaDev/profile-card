@@ -1,3 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
-  background-color: black;
-  color: red; }
+  font-family: "Kumbh Sans", serif;
+  background-color: #19a2ae; }
+
+.box {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  color: #969696; }
+  .box-bg-circle {
+    position: absolute;
+    z-index: 10;
+    width: 600px;
+    top: -200px;
+    left: -50px; }
+  .box-bg-circle-bottom {
+    position: absolute;
+    z-index: 10;
+    width: 600px;
+    top: 300px;
+    right: -50px;
+    overflow-x: hidden;
+    overflow-y: hidden; }
+
+.card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 20;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px; }
+  .card-letter-color {
+    color: #2d3248; }
+  .card-background {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover; }
+  .card-profile {
+    width: 30%;
+    border-radius: 50%;
+    margin-top: -15%;
+    border: 7px solid white; }
+  .card-title {
+    font-size: 25px;
+    margin: 20px 0; }
+  .card-city {
+    margin-bottom: 20px; }
+  .card-social-media {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style-type: none;
+    font-size: smaller;
+    padding-bottom: 30px; }
+    .card-social-media--top {
+      border-top: 1px solid #969696;
+      font-size: 20px;
+      padding-top: 30px;
+      padding-bottom: 5px;
+      font-weight: 700; }

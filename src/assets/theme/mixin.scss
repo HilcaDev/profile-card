@@ -1,0 +1,10 @@
+@mixin flexbox ($justify-content) {
+    display: flex;
+    justify-content:$justify-content;  
+}
+
+@mixin position ($position,$zindex,$width) {
+    position:$position;
+    z-index:$zindex;
+    width: $width;
+}

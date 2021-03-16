@@ -1,7 +1,75 @@
 @import "../theme/color.scss";
+@import "../theme/mixin.scss";
 @import "../theme/globals.scss";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
 
-body{
-    background-color: black;
-    color:$color;
+.box{
+    @include flexbox(center);
+    margin-top: 150px;
+    color:$dark-gray;
+
+    &-bg-circle{
+     @include position(absolute,10,600px);
+     top:-200px;
+     left:-50px;
+    }
+
+    &-bg-circle-bottom{
+     @include position(absolute,10,600px);
+     top:300px;
+     right:-50px;
+     overflow-x:hidden;
+     overflow-y:hidden;
+    }
+}
+.card{
+    @include flexbox(center);
+    @include position(relative,20,25%);
+    flex-direction: column  ;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+
+    &-letter-color{
+        color: $desaturated-blue;
+    }
+
+    &-background{
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-size: cover;
+    }
+
+    &-profile{
+        width: 30%;
+        border-radius: 50%;
+        margin-top: -15%;
+        border:7px solid white;
+    }
+
+    &-title{
+        font-size: 25px;
+        margin:20px 0;
+    }
+
+    &-city{
+       margin-bottom: 20px;
+    }
+
+    &-social-media{
+        @include flexbox(space-evenly);
+        width:100%;
+        list-style-type: none;
+        font-size:smaller;
+        padding-bottom: 30px;
+       
+        &--top{
+         border-top: 1px solid $dark-gray;
+         font-size: 20px;
+         padding-top: 30px;
+         padding-bottom: 5px;
+         font-weight: 700;
+        }
+    }
 }
