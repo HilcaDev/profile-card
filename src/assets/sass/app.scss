@@ -1,24 +1,26 @@
 @import "../theme/color.scss";
 @import "../theme/mixin.scss";
 @import "../theme/globals.scss";
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
 
-.container{
-  @include flexbox(center);
-  margin-top: 150px;
+.container {
+    @include flexbox(center);
+    margin-top: 150px;
 }
-.circle-top{
-    @include position(500px,absolute);
-    top:-100px;
-    left:20px; 
+
+.circle-top {
+    @include position(500px, absolute);
+    top: -100px;
+    left: 20px;
 }
-.circle-bottom{
-    @include position(500px,absolute);
-    right:-0px;
+
+.circle-bottom {
+    @include position(500px, absolute);
+    right: -0px;
     bottom: -150px;
 }
 
-.card{
+.card {
     position: relative;
     z-index: 10px;
     display: flex;
@@ -26,66 +28,73 @@
     align-items: center;
     background-color: white;
     border-radius: 20px;
-    color:$desaturated-blue;
+    color: $desaturated-blue;
 
-    &-background{
+    &-background {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
 
-    &-text{
+    &-text {
         text-align: center;
-       &-img{
-           position: relative;
-           top:-50px;
-           border-radius: 50%;
-           border: 5px solid white;
+
+        &-img {
+            position: relative;
+            top: -50px;
+            border-radius: 50%;
+            border: 5px solid white;
         }
-        &-section{
-            @include margin(-50px,7px);
+
+        &-section {
+            @include margin(-50px, 7px);
             line-height: 10px;
         }
-        &-color{
-            color:$dark-gray;
-            &--size{
+
+        &-color {
+            color: $dark-gray;
+            &--size {
                 font-size: 10px;
                 text-align: center;
-            } 
-        }  
+            }
+        }
     }
 
-    &-media{
+    &-media {
         @include flexbox(space-evenly);
-        @include margin(20px,15px);
+        @include margin(20px, 15px);
         width: 100%;
-        border-top:1px solid $dark-gray;
-        &-comments{
-           padding: 10px;
+        border-top: 1px solid $dark-gray;
+
+        &-comments {
+            padding: 10px;
         }
-        &-value{
+
+        &-value {
             font-weight: bolder;
             padding: 5px;
         }
     }
-
 }
 
 @media screen and (max-width: 550px) {
-    body{
+    body {
         overflow: scroll;
     }
+
     .card {
-       display: flex;
-       flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
-    .circle-top{
-        @include position(400px,absolute);
-        top:-180px;
-        left:-180px; 
+
+    .circle-top {
+        @include position(400px, absolute);
+        top: -180px;
+        left: -180px;
     }
-    .circle-bottom{
-        @include position(400px,absolute);
-        right:-200px;
+    
+    .circle-bottom {
+        @include position(400px, absolute);
+        right: -200px;
         bottom: -150px;
     }
 }

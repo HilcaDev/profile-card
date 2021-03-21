@@ -1,14 +1,14 @@
-@mixin flexbox ($justify-content) {
+@mixin flexbox($justify-content) {
     display: flex;
-    justify-content:$justify-content;  
+    justify-content: $justify-content;
 }
 
-@mixin margin ($top,$bottom) {
-    margin-top:$top;
-    margin-bottom:$bottom;
+@mixin margin($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
 }
 
-@mixin position($width,$position){
-    width:$width;
-    position:$position;
+@mixin position($width, $position) {
+    width: $width;
+    position: $position;
 }
