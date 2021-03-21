@@ -7,27 +7,41 @@
     <link rel="stylesheet" href="./src/assets/css/app.css">
 </head>
 <body>
-    <div class="box">
-        <img class="box-bg-circle" src="./src/assets/images/bg-pattern-top.svg">
-        <img class="box-bg-circle-bottom" src="./src/assets/images/bg-pattern-bottom.svg">
-        <div class="card">
-            <img class="card-background" src="./src/assets/images/bg-pattern-card.svg" alt="Background Image">
-            <img class="card-profile" src="./src/assets/images/image-victor.jpg" alt="Profile Victor Image">
-            <h1 class="card-title"><spand class="card-letter-color">Victor Crest</spand> 26</h1>
-            <p class="card-city">
-                London
-            </p>
-            <ul class=" card-social-media card-social-media--top card-letter-color">
-              <li>80K</li>
-              <li>803K</li>
-              <li>1.4K</li>
-            </ul>
-            <ul class="card-social-media">
-              <li>Followers</li>
-              <li>Likes</li>
-              <li>Photos</li>
-            </ul>
+    <div class="container">
+        <div>
+          <img class="circle-top" src="./src/assets/images/bg-pattern-top.svg"> 
         </div>
-    </div>
+        <div>
+          <img class="circle-bottom" src="./src/assets/images/bg-pattern-bottom.svg">
+        </div>
+        <div class="card">
+            <div>
+              <img class="card-background" src="./src/assets/images/bg-pattern-card.svg" alt="Background Image">
+            </div>
+            <div class="card-text">
+               <img class="card-text-img" src="./src/assets/images/image-victor.jpg" alt="Profile Victor Image">
+               <div class="card-text-section">
+                  <h2>Victor Crest <span class="card-text-color">26</span></h2>
+                  <p class="card-text-color">
+                     London
+                  </p>
+               </div>
+            </div>
+            <div class="card-media">
+              <div class="card-media-comments">
+                 <div class="card-media-value">80k</div>
+                 <div class="card-text-color card-text-color--size">Followers</div>
+              </div>
+              <div class="card-media-comments">
+                 <div class="card-media-value">803k</div>
+                 <div class="card-text-color card-text-color--size">Likes</div>
+              </div>
+              <div class="card-media-comments">
+                 <div class="card-media-value">1.4k</div>
+                 <div class="card-text-color card-text-color--size">Photos</div>
+              </div>
+            </div>
+        </div>
+    </div>  
 </body>
 </html>

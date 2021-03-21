@@ -3,71 +3,89 @@
 @import "../theme/globals.scss";
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
 
-.box{
-    @include flexbox(center);
-    margin-top: 150px;
-    color:$dark-gray;
-
-    &-bg-circle{
-     @include position(absolute,10,600px);
-     top:-200px;
-     left:-50px;
-    }
-
-    &-bg-circle-bottom{
-     @include position(absolute,10,600px);
-     top:300px;
-     right:-50px;
-    }
+.container{
+  @include flexbox(center);
+  margin-top: 150px;
 }
+.circle-top{
+    @include position(500px,absolute);
+    top:-100px;
+    left:20px; 
+}
+.circle-bottom{
+    @include position(500px,absolute);
+    right:-0px;
+    bottom: -150px;
+}
+
 .card{
-    @include flexbox(center);
-    @include position(relative,20,25%);
-    flex-direction: column  ;
+    position: relative;
+    z-index: 10px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: white;
     border-radius: 20px;
-
-    &-letter-color{
-        color: $desaturated-blue;
-    }
+    color:$desaturated-blue;
 
     &-background{
-        width: 100%;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        background-size: cover;
     }
 
-    &-profile{
-        width: 30%;
-        border-radius: 50%;
-        margin-top: -15%;
-        border:7px solid white;
-    }
-
-    &-title{
-        font-size: 25px;
-        margin:20px 0;
-    }
-
-    &-city{
-       margin-bottom: 20px;
-    }
-
-    &-social-media{
-        @include flexbox(space-evenly);
-        width:100%;
-        list-style-type: none;
-        font-size:smaller;
-        padding-bottom: 30px;
-       
-        &--top{
-         border-top: 1px solid $dark-gray;
-         font-size: 20px;
-         padding-top: 30px;
-         padding-bottom: 5px;
-         font-weight: 700;
+    &-text{
+        text-align: center;
+       &-img{
+           position: relative;
+           top:-50px;
+           border-radius: 50%;
+           border: 5px solid white;
         }
+        &-section{
+            @include margin(-50px,7px);
+            line-height: 10px;
+        }
+        &-color{
+            color:$dark-gray;
+            &--size{
+                font-size: 10px;
+                text-align: center;
+            } 
+        }  
+    }
+
+    &-media{
+        @include flexbox(space-evenly);
+        @include margin(20px,15px);
+        width: 100%;
+        border-top:1px solid $dark-gray;
+        &-comments{
+           padding: 10px;
+        }
+        &-value{
+            font-weight: bolder;
+            padding: 5px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    body{
+        overflow: scroll;
+    }
+    .card {
+       display: flex;
+       flex-direction: column;
+    }
+    .circle-top{
+        @include position(400px,absolute);
+        top:-180px;
+        left:-180px; 
+    }
+    .circle-bottom{
+        @include position(400px,absolute);
+        right:-200px;
+        bottom: -150px;
     }
 }

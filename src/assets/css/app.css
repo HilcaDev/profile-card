@@ -1,67 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
-* {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-family: "Kumbh Sans", serif;
-  background-color: #19a2ae; }
+  background-color: #19a2ae;
+  overflow: hidden; }
 
-.box {
+.container {
   display: flex;
   justify-content: center;
-  margin-top: 150px;
-  color: #969696; }
-  .box-bg-circle {
-    position: absolute;
-    z-index: 10;
-    width: 600px;
-    top: -200px;
-    left: -50px; }
-  .box-bg-circle-bottom {
-    position: absolute;
-    z-index: 10;
-    width: 600px;
-    top: 300px;
-    right: -50px; }
+  margin-top: 150px; }
+
+.circle-top {
+  width: 500px;
+  position: absolute;
+  top: -100px;
+  left: 20px; }
+
+.circle-bottom {
+  width: 500px;
+  position: absolute;
+  right: -0px;
+  bottom: -150px; }
 
 .card {
-  display: flex;
-  justify-content: center;
   position: relative;
-  z-index: 20;
-  width: 25%;
+  z-index: 10px;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
-  border-radius: 20px; }
-  .card-letter-color {
-    color: #2d3248; }
+  border-radius: 20px;
+  color: #2d3248; }
   .card-background {
-    width: 100%;
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-size: cover; }
-  .card-profile {
-    width: 30%;
-    border-radius: 50%;
-    margin-top: -15%;
-    border: 7px solid white; }
-  .card-title {
-    font-size: 25px;
-    margin: 20px 0; }
-  .card-city {
-    margin-bottom: 20px; }
-  .card-social-media {
+    border-top-right-radius: 15px; }
+  .card-text {
+    text-align: center; }
+    .card-text-img {
+      position: relative;
+      top: -50px;
+      border-radius: 50%;
+      border: 5px solid white; }
+    .card-text-section {
+      margin-top: -50px;
+      margin-bottom: 7px;
+      line-height: 10px; }
+    .card-text-color {
+      color: #969696; }
+      .card-text-color--size {
+        font-size: 10px;
+        text-align: center; }
+  .card-media {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 15px;
     width: 100%;
-    list-style-type: none;
-    font-size: smaller;
-    padding-bottom: 30px; }
-    .card-social-media--top {
-      border-top: 1px solid #969696;
-      font-size: 20px;
-      padding-top: 30px;
-      padding-bottom: 5px;
-      font-weight: 700; }
+    border-top: 1px solid #969696; }
+    .card-media-comments {
+      padding: 10px; }
+    .card-media-value {
+      font-weight: bolder;
+      padding: 5px; }
+
+@media screen and (max-width: 550px) {
+  body {
+    overflow: scroll; }
+  .card {
+    display: flex;
+    flex-direction: column; }
+  .circle-top {
+    width: 400px;
+    position: absolute;
+    top: -180px;
+    left: -180px; }
+  .circle-bottom {
+    width: 400px;
+    position: absolute;
+    right: -200px;
+    bottom: -150px; } }

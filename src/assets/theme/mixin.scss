@@ -3,8 +3,12 @@
     justify-content:$justify-content;  
 }
 
-@mixin position ($position,$zindex,$width) {
+@mixin margin ($top,$bottom) {
+    margin-top:$top;
+    margin-bottom:$bottom;
+}
+
+@mixin position($width,$position){
+    width:$width;
     position:$position;
-    z-index:$zindex;
-    width: $width;
 }
